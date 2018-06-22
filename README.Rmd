@@ -1,10 +1,14 @@
-baseball\_R
-================
+---
+title: "baseball_R"
+output:
+  github_document:
+    html_preview: true
+---
 
 Companion to *Analyzing Baseball Data with R*, 2nd edition.
 
--   Official book page: <http://www.crcpress.com/product/isbn/9781466570221>
--   Book's blog: <http://baseballwithr.wordpress.com/>
+- Official book page: http://www.crcpress.com/product/isbn/9781466570221
+- Book's blog: http://baseballwithr.wordpress.com/
 
 Instructions
 ------------
@@ -13,4 +17,4 @@ In order to have a working copy of the code in the book, download the zip file o
 
 The `data` folder contains datasets used in the book, except those downloadable from websites. In order to get the missing datasets, read the `readme.txt` files stored inside the `lahman`, `sqldumps` and `wizardry` subfolders of the `data` folder.
 
-Last updated: `June 22, 2018`
+Last updated: ```r format(Sys.Date(), "%B %e, %Y")```
