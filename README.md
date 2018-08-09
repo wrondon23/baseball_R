@@ -11,6 +11,8 @@ Instructions
 
 In order to have a working copy of the code in the book, download the zip file of this repository and extract the content of the zip file in a folder of your convenience.
 
-The `data` folder contains datasets used in the book, except those downloadable from websites. In order to get the missing datasets, read the `readme.txt` files stored inside the `lahman`, `sqldumps` and `wizardry` subfolders of the `data` folder.
+-   The `data` folder contains datasets used in the book, except those downloadable from websites. In order to get the missing datasets, read the `readme.txt` files stored inside the `lahman`, `sqldumps` and `wizardry` subfolders of the `data` folder.
+-   The `scripts` folder contains standalone R scripts that were referenced in the text.
+-   The `chapter_code` folder contains all of the code that was written to generate each chapter. (e.g., the result of running `knitr::purl()` on each of the chapter source files.)
 
-Last updated: `June 22, 2018`
+Last updated: `August  9, 2018`
