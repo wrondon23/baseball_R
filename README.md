@@ -3,7 +3,9 @@ baseball\_R
 
 Companion to *Analyzing Baseball Data with R*, 2nd edition.
 
--   Official book page: <http://www.crcpress.com/product/isbn/9781466570221>
+![](https://images.tandf.co.uk/common/jackets/amazon/978081535/9780815353515.jpg)
+
+-   Official book page: <https://www.crcpress.com/Analyzing-Baseball-Data-with-R-Second-Edition/Marchi-Albert-Baumer/p/book/9780815353515>
 -   Book's blog: <http://baseballwithr.wordpress.com/>
 
 Instructions
@@ -15,4 +17,4 @@ In order to have a working copy of the code in the book, download the zip file o
 -   The `scripts` folder contains standalone R scripts that were referenced in the text.
 -   The `chapter_code` folder contains all of the code that was written to generate each chapter. (e.g., the result of running `knitr::purl()` on each of the chapter source files.)
 
-Last updated: `August  9, 2018`
+Last updated: `October 15, 2018`

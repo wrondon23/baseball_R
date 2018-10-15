@@ -7,7 +7,9 @@ output:
 
 Companion to *Analyzing Baseball Data with R*, 2nd edition.
 
-- Official book page: http://www.crcpress.com/product/isbn/9781466570221
+![](https://images.tandf.co.uk/common/jackets/amazon/978081535/9780815353515.jpg)
+
+- Official book page: https://www.crcpress.com/Analyzing-Baseball-Data-with-R-Second-Edition/Marchi-Albert-Baumer/p/book/9780815353515
 - Book's blog: http://baseballwithr.wordpress.com/
 
 Instructions
