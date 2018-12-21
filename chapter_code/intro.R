@@ -12,7 +12,7 @@ library(tidyverse)
 ##   outer_function(y)
 
 ## ------------------------------------------------------------------------
-spahn <- read_csv("data/spahn.csv")
+spahn <- read_csv("../data/spahn.csv")
 spahn %>% slice(1:3) %>% select(1:10)
 
 ## ------------------------------------------------------------------------
@@ -53,12 +53,12 @@ spahn1 %>%
             mean_FIP = mean(FIP))
 
 ## ------------------------------------------------------------------------
-NLbatting <- read_csv("data/NLbatting.csv")
-ALbatting <- read_csv("data/ALbatting.csv")
+NLbatting <- read_csv("../data/NLbatting.csv")
+ALbatting <- read_csv("../data/ALbatting.csv")
 batting <- bind_rows(NLbatting, ALbatting)
 
 ## ------------------------------------------------------------------------
-NLpitching <- read_csv("data/NLpitching.csv")
+NLpitching <- read_csv("../data/NLpitching.csv")
 NL <- inner_join(NLbatting, NLpitching, by = "Tm")
 
 ## ------------------------------------------------------------------------
@@ -217,7 +217,7 @@ hr_rates <- function(age, hr, ab) {
 }
 
 ## ------------------------------------------------------------------------
-source("scripts/hr_rates.R")
+source("../scripts/hr_rates.R")
 
 ## ------------------------------------------------------------------------
 HR <- c(13, 23, 21, 27, 37, 52, 34, 42, 31, 40, 54)
@@ -232,7 +232,7 @@ hr_rates(Age, HR, AB)
 getwd()
 
 ## ------------------------------------------------------------------------
-spahn <- read_csv("data/spahn.csv")
+spahn <- read_csv("../data/spahn.csv")
 
 ## ------------------------------------------------------------------------
 HR <- c(13, 23, 21, 27, 37, 52, 34, 42, 31, 40, 54)
@@ -242,7 +242,7 @@ hr_rates <- hr_rates(Age, HR, AB)
 Mantle <- data.frame(Age, HR, AB, Rates = hr_rates$y)
 
 ## ------------------------------------------------------------------------
-write_csv(Mantle, "data/mantle.csv")
+write_csv(Mantle, "../data/mantle.csv")
 
 ## ------------------------------------------------------------------------
 list.files("data", pattern = "mantle")

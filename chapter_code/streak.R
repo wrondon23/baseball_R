@@ -3,7 +3,7 @@ source("global_config.R")
 
 ## ----warning=FALSE, message=FALSE----------------------------------------
 library(tidyverse)
-joe <- read_csv("data/dimaggio.1941.csv")
+joe <- read_csv("../data/dimaggio.1941.csv")
 
 ## ------------------------------------------------------------------------
 joe %>% summarize(AVG = sum(H) / sum(AB))
@@ -56,8 +56,8 @@ ggplot(joe_ma, aes(Game, Average)) +
            aes(Rk, .3 * HIT), sides = "b")
 
 ## ----warning=FALSE-------------------------------------------------------
-fields <- read_csv("data/fields.csv")
-data2016 <- read_csv("data/all2016.csv", 
+fields <- read_csv("../data/fields.csv")
+data2016 <- read_csv("../data/all2016.csv", 
                      col_names = pull(fields, Header), 
                      na = character())
 
@@ -164,7 +164,7 @@ ichiro_random <- replicate(1000, random_mix(ichiro_AB$H))
 
 ## ----clump1, fig.cap="Histogram of one thousand values of the clumpiness statistic assuming all arrangements of hits and outs for Suzuki are equally likely. The observed value of the clumpiness statistic for Suzuki is shown using a vertical line."----
 ggplot(data.frame(ichiro_random), aes(ichiro_random)) +
-  geom_histogram(aes(y = calc(density)), bins = 20, 
+  geom_histogram(aes(y = stat(density)), bins = 20, 
                  color = crcblue, fill = "white") +
   geom_vline(xintercept = ichiro_S, size = 2) +
   annotate(geom = "text", x = ichiro_S * 1.15,
@@ -191,7 +191,7 @@ clump_test <- function(data, playerid) {
   ST <- replicate(1000, random_mix(player.AB$H))
   
   ggplot(data.frame(ST), aes(ST)) +
-    geom_histogram(aes(y = calc(density)), bins = 20, 
+    geom_histogram(aes(y = stat(density)), bins = 20, 
                    color = crcblue, fill = "white") +
     geom_vline(xintercept = stat, size = 2) +
     annotate(geom = "text", x = stat * 1.10,
@@ -202,7 +202,7 @@ clump_test <- function(data, playerid) {
 clump_test(data2016, "troum001")
 
 ## ----warning=FALSE-------------------------------------------------------
-statcast2017 <- read_csv("data/statcast2017.csv")
+statcast2017 <- read_csv("../data/statcast2017.csv")
 statcast2017 %>% 
   filter(type == "X") -> sc_ip2017
 sc_ip2017 %>% 
