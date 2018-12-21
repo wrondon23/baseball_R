@@ -1,2 +1,3 @@
 ## Errata from the 2nd edition
 
+1.  Page 52, code at the bottom. The "crcblue" color is not defined.  It is defined by crcblue <- "#2905a1".  This change is included in the global_config.R file in the chapter_code folder.
