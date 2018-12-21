@@ -3,7 +3,7 @@ source("global_config.R")
 
 ## ------------------------------------------------------------------------
 library(tidyverse)
-hof <- read_csv("data/hofbatting.csv")
+hof <- read_csv("../data/hofbatting.csv")
 
 ## ------------------------------------------------------------------------
 hof <- hof %>%
@@ -164,8 +164,8 @@ ggplot(HRdata, aes(x = Age, y = CHR, linetype = Player)) +
   geom_line()
 
 ## ----warning=FALSE-------------------------------------------------------
-fields <- read_csv("data/fields.csv")
-data1998 <- read_csv("data/all1998.csv", 
+fields <- read_csv("../data/fields.csv")
+data1998 <- read_csv("../data/all1998.csv", 
                      col_names = pull(fields, Header))
 
 ## ------------------------------------------------------------------------
