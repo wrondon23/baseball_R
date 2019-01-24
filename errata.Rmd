@@ -11,7 +11,7 @@ It is defined by crcblue <- "#2905a1".  This change is included in the global_co
 
 5.  Page 165, top paragraph.  The definition of a called strike as type = "S" is incorrect.  
 The des variable indicates the result of the pitch.  The values "Ball", "Ball in Dirt", 
-"Called Strike", "Intent Ball", "Missed Bunt", "Pitchout" are when the batter does not swing 
+"Called Strike", "Intent Ball",  "Pitchout" are when the batter does not swing 
 and we are interested in the "Called Strike" outcome for these no-swing pitches.  This 
 error impacts the results in the remainder of this chapter.
 
