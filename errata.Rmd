@@ -1,2 +1,19 @@
 ## Errata from the 2nd edition
 
+1.  Page 27, line 5. In the first answer “median launch speed” should be “median launch angle”.
+
+2.  Page 52, code at the bottom. The "crcblue" color is not defined.  
+It is defined by crcblue <- "#2905a1".  This change is included in the global_config.R file in the chapter_code folder.
+ 
+3.  Page 59: First sentence of 2.10.1.  Replace “… operation to over a sequence of inputs” with “… operation over a sequence of inputs” .
+
+4.  Page 147: Figure 6.2: The strike values 012 are not placed under their tick marks.
+
+5.  Page 165, top paragraph.  The definition of a called strike as type = "S" is incorrect.  
+The des variable indicates the result of the pitch.  The values "Ball", "Ball in Dirt", 
+"Called Strike", "Intent Ball",  "Pitchout" are when the batter does not swing 
+and we are interested in the "Called Strike" outcome for these no-swing pitches.  This 
+error impacts the results in the remainder of this chapter.
+
+6.  Page 222: In top paragraph, Detroit did not make the World series in this simulation.
+

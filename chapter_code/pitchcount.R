@@ -39,8 +39,8 @@ grepl("11", sequences)
 gsub("1", "", sequences)
 
 ## ----warning=FALSE-------------------------------------------------------
-headers <- read_csv("data/fields.csv")
-pbp2016 <- read_csv("data/all2016.csv", 
+headers <- read_csv("../data/fields.csv")
+pbp2016 <- read_csv("../data/all2016.csv", 
                     col_names = pull(headers, Header),
                     na = character())
 
@@ -209,7 +209,7 @@ count11 %>%
 rm(list = ls())
 
 ## ----load-balls----------------------------------------------------------
-load("data/balls_strikes_count.RData")
+load("../data/balls_strikes_count.RData")
 ls()
 
 ## ----global_options, include=FALSE---------------------------------------

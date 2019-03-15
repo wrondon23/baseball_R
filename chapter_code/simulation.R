@@ -3,8 +3,8 @@ source("global_config.R")
 
 ## ----warning=FALSE, message=FALSE----------------------------------------
 library(tidyverse)
-fields <- read_csv("data/fields.csv")
-data2016 <- read_csv("data/all2016.csv", 
+fields <- read_csv("../data/fields.csv")
+data2016 <- read_csv("../data/all2016.csv", 
                      col_names = pull(fields, Header), 
                      na = character())
 
@@ -300,7 +300,7 @@ RESULTS %>%
   replace_na(list(Winner.WS = 0))
 
 ## ------------------------------------------------------------------------
-source("scripts/one.simulation.68.R")
+source("../scripts/one.simulation.68.R")
 set.seed(111653)
 RESULTS <- one.simulation.68(0.20)
 RESULTS

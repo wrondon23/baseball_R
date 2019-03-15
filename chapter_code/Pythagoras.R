@@ -89,8 +89,8 @@ pytFit <- lm(logWratio ~ 0 + logRratio, data = my_teams)
 pytFit
 
 ## ----read-game-log-------------------------------------------------------
-glheaders <- read_csv("data/game_log_header.csv")	
-gl2011 <- read_csv("data/gl2011.txt", 
+glheaders <- read_csv("../data/game_log_header.csv")	
+gl2011 <- read_csv("../data/gl2011.txt", 
                    col_names = names(glheaders),
                    na = character())
 

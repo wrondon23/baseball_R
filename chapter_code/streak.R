@@ -3,7 +3,7 @@ source("global_config.R")
 
 ## ----warning=FALSE, message=FALSE----------------------------------------
 library(tidyverse)
-joe <- read_csv("data/dimaggio.1941.csv")
+joe <- read_csv("../data/dimaggio.1941.csv")
 
 ## ------------------------------------------------------------------------
 joe %>% summarize(AVG = sum(H) / sum(AB))
@@ -56,8 +56,8 @@ ggplot(joe_ma, aes(Game, Average)) +
            aes(Rk, .3 * HIT), sides = "b")
 
 ## ----warning=FALSE-------------------------------------------------------
-fields <- read_csv("data/fields.csv")
-data2016 <- read_csv("data/all2016.csv", 
+fields <- read_csv("../data/fields.csv")
+data2016 <- read_csv("../data/all2016.csv", 
                      col_names = pull(fields, Header), 
                      na = character())
 
@@ -202,7 +202,7 @@ clump_test <- function(data, playerid) {
 clump_test(data2016, "troum001")
 
 ## ----warning=FALSE-------------------------------------------------------
-statcast2017 <- read_csv("data/statcast2017.csv")
+statcast2017 <- read_csv("../data/statcast2017.csv")
 statcast2017 %>% 
   filter(type == "X") -> sc_ip2017
 sc_ip2017 %>% 

@@ -3,7 +3,7 @@ source("global_config.R")
 
 ## ----message=FALSE-------------------------------------------------------
 library(tidyverse)
-db <- src_sqlite("data/pitchrx.sqlite", create = TRUE)
+db <- src_sqlite("../data/pitchrx.sqlite", create = TRUE)
 
 ## ----pitchRx, eval=FALSE-------------------------------------------------
 ## library(pitchRx)

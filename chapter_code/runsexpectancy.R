@@ -6,8 +6,8 @@ library(tidyverse)
 library(Lahman)
 
 ## ----warning=FALSE-------------------------------------------------------
-fields <- read_csv("data/fields.csv")
-data2016 <- read_csv("data/all2016.csv", 
+fields <- read_csv("../data/fields.csv")
+data2016 <- read_csv("../data/all2016.csv", 
                      col_names = pull(fields, Header),
                      na = character())
 
