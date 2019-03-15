@@ -80,7 +80,7 @@ left_handed_batters %>%
               mean(if_fielding_alignment == "Infield shift",
                    na.rm = TRUE)) -> shift_data
 
-## ----shift2_plot, warning=FALSE, fig.cap="Scatterplot of percentage of ground balls pulled and percentage of infield shifts for all left-handed hitters, 2017"----
+## ----shift2_plot, warning=FALSE, fig.cap="Scatterplot of percentage of ground balls pulled and percentage of infield shifts for all left-handed hitters, 2017."----
 ggplot(shift_data, aes(P_opp, Shift)) + 
   geom_point() +
   xlab("Percentage of Grounders Pulled") +
@@ -110,14 +110,14 @@ ev_plot <- sc_bips %>%
   scale_y_continuous("Launch angle (degrees)", 
                      breaks = seq(-75, 75, 25))
 
-## ----ev_plot, warning=FALSE, fig.cap="Estimated batting average as a function of launch angle and exit velocity, 2017"----
+## ----ev_plot, warning=FALSE, fig.cap="Estimated batting average as a function of launch angle and exit velocity, 2017."----
 ev_plot
 
-## ----ev_plot_facet, warning=FALSE, fig.cap="Estimated batting average as a function of launch angle and exit velocity, for both LHB and RHB, 2017", fig.height=10----
+## ----ev_plot_facet, warning=FALSE, fig.cap="Estimated batting average as a function of launch angle and exit velocity, for both LHB and RHB, 2017.", fig.height=8.5----
 ev_plot + 
   facet_grid(p_throws ~ stand)
 
-## ----ev_plot_woba, warning=FALSE, fig.cap="Estimated wOBA as a function of launch angle and exit velocity, 2017"----
+## ----ev_plot_woba, warning=FALSE, fig.cap="Estimated wOBA as a function of launch angle and exit velocity, 2017."----
 ev_plot +
   aes(color = estimated_woba_using_speedangle) + 
   guides(color = guide_colorbar(title = "wOBA"))

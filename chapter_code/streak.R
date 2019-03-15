@@ -164,7 +164,7 @@ ichiro_random <- replicate(1000, random_mix(ichiro_AB$H))
 
 ## ----clump1, fig.cap="Histogram of one thousand values of the clumpiness statistic assuming all arrangements of hits and outs for Suzuki are equally likely. The observed value of the clumpiness statistic for Suzuki is shown using a vertical line."----
 ggplot(data.frame(ichiro_random), aes(ichiro_random)) +
-  geom_histogram(aes(y = calc(density)), bins = 20, 
+  geom_histogram(aes(y = stat(density)), bins = 20, 
                  color = crcblue, fill = "white") +
   geom_vline(xintercept = ichiro_S, size = 2) +
   annotate(geom = "text", x = ichiro_S * 1.15,
@@ -191,7 +191,7 @@ clump_test <- function(data, playerid) {
   ST <- replicate(1000, random_mix(player.AB$H))
   
   ggplot(data.frame(ST), aes(ST)) +
-    geom_histogram(aes(y = calc(density)), bins = 20, 
+    geom_histogram(aes(y = stat(density)), bins = 20, 
                    color = crcblue, fill = "white") +
     geom_vline(xintercept = stat, size = 2) +
     annotate(geom = "text", x = stat * 1.10,
@@ -265,7 +265,7 @@ Results <- player_list %>%
   map_df(summarize_streak_data, data = LS_250) %>%
   mutate(Player = player_list)
 
-## ----scatter, fig.cap="Scatterplot of means and standard deviations of the five-game averages of launch speeds of regular players during the 2017 season.  The labelled points correspond to the players with the smallest and largest standard deviations, corresponding to consistent and streaky hitters."----
+## ----scatter, fig.cap="Scatterplot of means and standard deviations of the five-game averages of launch speeds of regular players during the 2017 season.  The labeled points correspond to the players with the smallest and largest standard deviations, corresponding to consistent and streaky hitters."----
 library(ggrepel)
 ggplot(Results, aes(Mean, SD)) +
   geom_point() +

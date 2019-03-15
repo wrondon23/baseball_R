@@ -253,7 +253,7 @@ pred_area_fit %>%
 ## ----cabreraAll, warning=FALSE, fig.cap="Contour plot of Miguel Cabrera's swinging tendency by location, where the view is from the catcher's perspective.  The contour lines are labeled by the probability of swinging at the pitch."----
 cabrera_plot <- k_zone_plot %+% 
   filter(pred_area_fit, fit >= 0, fit <= 1) +
-  stat_contour(aes(z = fit, color = calc(level)), 
+  stat_contour(aes(z = fit, color = stat(level)), 
                binwidth = 0.2) + 
   scale_color_gradient(low = "white", high = crcblue)
 
